@@ -46,14 +46,14 @@ def load_config(config_path: str, base_dir: Optional[str] = None) -> Dict[Any, A
         Merged configuration dictionary
 
     Example:
-        # agents-trademe.yaml contains:
+        # agents-generic.yaml contains:
         # extends: "agents-generic.yaml"
         # agents:
         #   architect:
-        #     name: "TradeMe iOS Architect"
+        #     name: "YourCompany iOS Architect"
 
-        config = load_config("config/agents-trademe.yaml")
-        # Result has generic config merged with TradeMe-specific overrides
+        config = load_config("config/agents-generic.yaml")
+        # Result has generic config merged with YourCompany-specific overrides
     """
     config_file = Path(config_path)
 
@@ -88,16 +88,16 @@ def load_config_by_name(config_name: str,
     Load configuration by name (without .yaml extension).
 
     Args:
-        config_name: Config name like "generic", "trademe", or "agents-trademe"
+        config_name: Config name like "generic", "generic", or "agents-generic"
         config_dir: Directory containing config files (default: "config")
 
     Returns:
         Configuration dictionary
 
     Examples:
-        >>> config = load_config_by_name("trademe")
         >>> config = load_config_by_name("generic")
-        >>> config = load_config_by_name("agents-trademe", config_dir="config")
+        >>> config = load_config_by_name("generic")
+        >>> config = load_config_by_name("agents-generic", config_dir="config")
     """
     # Add prefix if not present
     if not config_name.startswith("agents-"):
@@ -127,7 +127,7 @@ def get_available_configs(config_dir: str = "config") -> list:
 
     Examples:
         >>> get_available_configs()
-        ['generic', 'trademe']
+        ['generic', 'generic']
     """
     config_path = Path(config_dir)
     config_files = config_path.glob("agents-*.yaml")
@@ -194,18 +194,18 @@ if __name__ == "__main__":
     print(f"Architect name: {get_config_value(generic_config, 'agents.architect.name')}")
     print(f"Work folder: {get_config_value(generic_config, 'paths.work_folder')}")
 
-    # Test loading trademe config (extends generic)
+    # Test loading generic config (extends generic)
     print("\n" + "=" * 80)
-    print("Loading TradeMe config (extends generic):")
+    print("Loading YourCompany config (extends generic):")
     print("=" * 80)
-    trademe_config = load_config_by_name("trademe")
-    print(f"Architect name: {get_config_value(trademe_config, 'agents.architect.name')}")
-    print(f"Work folder: {get_config_value(trademe_config, 'paths.work_folder')}")
-    print(f"Target project: {get_config_value(trademe_config, 'paths.target_project')}")
+    generic_config = load_config_by_name("generic")
+    print(f"Architect name: {get_config_value(generic_config, 'agents.architect.name')}")
+    print(f"Work folder: {get_config_value(generic_config, 'paths.work_folder')}")
+    print(f"Target project: {get_config_value(generic_config, 'paths.target_project')}")
 
-    # Show TradeMe-specific values
-    print(f"\nTradeMe-specific architecture rules:")
-    arch_rules = get_config_value(trademe_config, 'architecture_rules', {})
+    # Show YourCompany-specific values
+    print(f"\nYourCompany-specific architecture rules:")
+    arch_rules = get_config_value(generic_config, 'architecture_rules', {})
     print(f"  - Universal API enabled: {arch_rules.get('universal_api', {}).get('enabled')}")
     print(f"  - Module pattern: {arch_rules.get('module_structure', {}).get('pattern')}")
 

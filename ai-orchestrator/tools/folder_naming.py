@@ -2,7 +2,7 @@
 Auto-folder naming utilities for the multi-agent orchestrator.
 
 Generates descriptive folder names from ticket inputs.
-Example: "VLP-123: Add caching layer" → "VLP-123-add-caching-layer"
+Example: "TICKET-123: Add caching layer" → "TICKET-123-add-caching-layer"
 """
 
 import re
@@ -14,17 +14,17 @@ def parse_ticket_input(ticket_input: str) -> Tuple[str, str]:
     Parse ticket input to extract ticket ID and title.
 
     Args:
-        ticket_input: Ticket string like "VLP-123: Add caching layer" or "VLP-123"
+        ticket_input: Ticket string like "TICKET-123: Add caching layer" or "TICKET-123"
 
     Returns:
         Tuple of (ticket_id, title)
 
     Examples:
-        >>> parse_ticket_input("VLP-123: Add caching layer")
-        ('VLP-123', 'Add caching layer')
+        >>> parse_ticket_input("TICKET-123: Add caching layer")
+        ('TICKET-123', 'Add caching layer')
 
-        >>> parse_ticket_input("VLP-123")
-        ('VLP-123', '')
+        >>> parse_ticket_input("TICKET-123")
+        ('TICKET-123', '')
 
         >>> parse_ticket_input("BUG-456: Fix crash on login")
         ('BUG-456', 'Fix crash on login')
@@ -102,7 +102,7 @@ def generate_folder_name(ticket_input: str,
     Generate a descriptive folder name from ticket input.
 
     Args:
-        ticket_input: Ticket string like "VLP-123: Add caching layer"
+        ticket_input: Ticket string like "TICKET-123: Add caching layer"
         max_description_length: Maximum length for description part (default: 50)
         remove_words: List of words to remove from description (default: ["the", "a", "an"])
 
@@ -110,14 +110,14 @@ def generate_folder_name(ticket_input: str,
         Folder name in format: {TICKET-ID}-{description-slug} or just {TICKET-ID}
 
     Examples:
-        >>> generate_folder_name("VLP-123: Add caching layer")
-        'VLP-123-add-caching-layer'
+        >>> generate_folder_name("TICKET-123: Add caching layer")
+        'TICKET-123-add-caching-layer'
 
         >>> generate_folder_name("BUG-456: Fix crash on login")
         'BUG-456-fix-crash-on-login'
 
-        >>> generate_folder_name("VLP-789")
-        'VLP-789'
+        >>> generate_folder_name("TICKET-789")
+        'TICKET-789'
 
         >>> generate_folder_name("FEAT-101: Implement the new user authentication system")
         'FEAT-101-implement-new-user-authentication'
@@ -150,10 +150,10 @@ def validate_folder_name(folder_name: str) -> bool:
         True if valid, False otherwise
 
     Examples:
-        >>> validate_folder_name("VLP-123-add-caching")
+        >>> validate_folder_name("TICKET-123-add-caching")
         True
 
-        >>> validate_folder_name("VLP-123")
+        >>> validate_folder_name("TICKET-123")
         True
 
         >>> validate_folder_name("invalid folder name")
@@ -180,10 +180,10 @@ DEFAULT_CONFIG = {
 if __name__ == "__main__":
     # Test examples
     test_inputs = [
-        "VLP-123: Add caching layer",
+        "TICKET-123: Add caching layer",
         "BUG-456: Fix crash on login",
         "FEAT-789: Implement the new user authentication system",
-        "VLP-101",
+        "TICKET-101",
         "STORY-202: Update the UI to match the new design system",
     ]
 
