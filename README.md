@@ -9,6 +9,11 @@ Structured patterns for AI-assisted software development with quality gates, val
 
 [Explore AI Factory Principles →](./ai-factory-principles)
 
+### AI Orchestrator
+Multi-agent orchestration patterns for coordinating AI workflows, task delegation, and parallel execution.
+
+[Explore AI Orchestrator →](./ai-orchestrator)
+
 ---
 
 ## 🛠 Tech Stack

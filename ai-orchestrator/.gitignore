@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Python
+*.pyc
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.cache
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Local environment
+.env
+.env.local
+
+# Build artifacts
+build/
+dist/
+*.egg-info/

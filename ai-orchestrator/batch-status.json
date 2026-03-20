@@ -1,0 +1,89 @@
+{
+  "items": [
+    {
+      "id": "VLP-507",
+      "status": "done",
+      "output_file": "work/VLP-507/research.md",
+      "updated_at": "2026-02-09T00:57:37Z",
+      "created_at": "2026-02-09T00:57:36Z"
+    },
+    {
+      "id": "VLP-508",
+      "status": "done",
+      "output_file": "work/VLP-508/research.md",
+      "updated_at": "2026-02-09T00:57:37Z",
+      "created_at": "2026-02-09T00:57:37Z"
+    },
+    {
+      "id": "VLP-509",
+      "status": "done",
+      "output_file": "work/VLP-509/research.md",
+      "updated_at": "2026-02-09T00:57:37Z",
+      "created_at": "2026-02-09T00:57:37Z"
+    },
+    {
+      "id": "VLP-510",
+      "status": "done",
+      "output_file": "work/VLP-510/research.md",
+      "updated_at": "2026-02-09T00:57:37Z",
+      "created_at": "2026-02-09T00:57:37Z"
+    },
+    {
+      "id": "VLP-511",
+      "status": "done",
+      "output_file": "work/VLP-511/research.md",
+      "updated_at": "2026-02-09T00:57:37Z",
+      "created_at": "2026-02-09T00:57:37Z"
+    },
+    {
+      "id": "VLP-512",
+      "status": "done",
+      "output_file": "work/VLP-512/research.md",
+      "updated_at": "2026-02-09T00:57:38Z",
+      "created_at": "2026-02-09T00:57:37Z"
+    },
+    {
+      "id": "VLP-513",
+      "status": "done",
+      "output_file": "work/VLP-513-mrec-advertisement/research.md",
+      "updated_at": "2026-02-09T01:12:42Z",
+      "created_at": "2026-02-09T00:57:38Z"
+    },
+    {
+      "id": "VLP-514",
+      "status": "done",
+      "output_file": "work/VLP-514-agent-info-private-advertiser/research.md",
+      "updated_at": "2026-02-09T01:12:42Z",
+      "created_at": "2026-02-09T00:57:38Z"
+    },
+    {
+      "id": "VLP-515",
+      "status": "done",
+      "output_file": "work/VLP-515-more-properties-carousel/research.md",
+      "updated_at": "2026-02-09T01:23:35Z",
+      "created_at": "2026-02-09T00:57:38Z"
+    },
+    {
+      "id": "VLP-516",
+      "status": "done",
+      "output_file": "work/VLP-516-footer-missing-elements/research.md",
+      "updated_at": "2026-02-09T01:23:35Z",
+      "created_at": "2026-02-09T00:57:38Z"
+    },
+    {
+      "id": "VLP-517",
+      "status": "done",
+      "output_file": "work/VLP-517-floating-agent-bar/research.md",
+      "updated_at": "2026-02-09T01:23:35Z",
+      "created_at": "2026-02-09T00:57:38Z"
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-02-09T00:00:00Z",
+    "last_updated": "2026-02-09T01:23:35Z",
+    "total_items": 11,
+    "completed": 11,
+    "failed": 0,
+    "pending": 0
+  }
+}

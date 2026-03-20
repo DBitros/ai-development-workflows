@@ -1,0 +1,141 @@
+# TradeMe iOS-Specific Multi-Agent Orchestrator Configuration
+# This config extends the generic base config with TradeMe-specific patterns
+
+# Extends generic config
+extends: "agents-generic.yaml"
+
+# Override agent names and concerns with TradeMe-specific details
+agents:
+  architect:
+    name: "TradeMe iOS Architect"
+    description: "Analyzes requirements and validates against TradeMe iOS architecture patterns"
+    primary_concerns:
+      - "Module dependency validation (Tuist constraints)"
+      - "Universal API pattern compliance (97% adoption)"
+      - "Dependencies framework usage"
+      - "Platform service integration patterns"
+      - "SwiftUI/UIKit integration strategies"
+
+  researcher:
+    name: "TradeMe iOS Researcher"
+    description: "Gathers context, researches existing patterns, creates Layer 3 requirements"
+    primary_concerns:
+      - "Codebase pattern analysis (25,976+ Swift files)"
+      - "Layer 3 requirements creation (TradeMe methodology)"
+      - "Legacy integration constraints"
+      - "Existing service discovery"
+      - "Design system pattern identification (Tangram2, Chassis, TMUILibrary)"
+
+  planner:
+    name: "TradeMe iOS Planner"
+    description: "Creates implementation plans with TradeMe compliance validation"
+    primary_concerns:
+      - "Layer 5 implementation design (TradeMe methodology)"
+      - "Triple module pattern adherence ({Module}/{ModuleApi}/{ModuleTests})"
+      - "RxSwift-Combine bridge patterns"
+      - "Testing strategy integration (Quick/Nimble)"
+      - "Build system compatibility (Tuist)"
+
+  programmer:
+    name: "TradeMe iOS Programmer"
+    description: "Generates Swift code following TradeMe patterns"
+    primary_concerns:
+      - "Swift code generation"
+      - "Module placement decisions (Platform/Shared/Feature hierarchy)"
+      - "Dependency injection using Dependencies framework"
+      - "Testing code generation (Quick/Nimble)"
+      - "Documentation generation"
+
+  security_engineer:
+    name: "TradeMe iOS Security Engineer"
+    description: "Performs security audits specific to iOS mobile apps"
+    primary_concerns:
+      - "OWASP Mobile Top 10 vulnerability scanning"
+      - "iOS-specific security (Keychain, certificate pinning, biometrics)"
+      - "API security analysis (authentication, token handling, PII)"
+      - "Code security review (hardcoded secrets, sensitive logging)"
+      - "Security compliance verification"
+
+  test_runner:
+    name: "TradeMe iOS Test Runner"
+    description: "Runs iOS tests with auto-fix using MCP integrations"
+    primary_concerns:
+      - "Swift unit test execution (Quick/Nimble)"
+      - "iOS UI testing using iOS Simulator MCP"
+      - "Web testing using Playwright MCP"
+      - "Deep research into TradeMe codebase when tests fail"
+      - "Auto-fix retry loop with intelligent failure analysis"
+
+  qa_engineer:
+    name: "TradeMe iOS QA Engineer"
+    description: "Tests and validates generated code against TradeMe standards"
+    primary_concerns:
+      - "Build validation (Tuist + Xcode)"
+      - "Unit test execution and coverage analysis"
+      - "Architecture compliance verification (Universal API, Triple Module)"
+      - "Performance benchmarking"
+      - "Integration testing with TradeMe iOS patterns"
+
+# TradeMe-specific paths
+paths:
+  specs_repo: "/Users/dbitros/Development/trademe-ai-specs"
+  target_project: "/Users/dbitros/Development/trademe"
+
+  # Reference documentation (TradeMe-specific)
+  architecture_quick_ref: ".claude/ARCHITECTURE-QUICK-REFERENCE.md"
+  comprehensive_guide: "specifications/0-foundations/tech-stack-docs/trademe-platform/comprehensive-ios-architecture.md"
+  validation_checklist: ".claude/validation/trademe-ios-architecture-checklist.md"
+
+# TradeMe-specific architecture validation rules
+architecture_rules:
+  # Universal API Architecture
+  universal_api:
+    enabled: true
+    adoption_target: 97  # Target percentage
+    pattern: "protocol-based API layer with triple module structure"
+
+  # Module structure
+  module_structure:
+    pattern: "triple"  # {Module}/{ModuleApi}/{ModuleTests}
+    hierarchy:
+      - "Platform"  # Foundation modules
+      - "Shared"    # Shared utilities
+      - "Feature"   # Feature modules
+
+  # Dependencies framework
+  dependency_injection:
+    framework: "Dependencies"
+    required: true
+
+  # Design systems
+  design_systems:
+    - "Tangram2"
+    - "Chassis"
+    - "TMUILibrary"
+
+  # Platform services
+  platform_services:
+    - "TMAPIClient"
+    - "TMLogger"
+    - "SessionManager"
+
+  # Build system
+  build_system: "Tuist"
+
+  # Testing framework
+  testing_framework: "Quick/Nimble"
+
+  # Reactive programming
+  reactive:
+    legacy: "RxSwift"
+    modern: "Combine"
+    bridge_required: true
+
+# TradeMe-specific quality gates
+quality_gates:
+  architecture_compliance: true
+  build_system_validation: true
+  testing_coverage: true
+  documentation_requirements: true
+  universal_api_compliance: true  # TradeMe-specific
+  triple_module_pattern: true      # TradeMe-specific

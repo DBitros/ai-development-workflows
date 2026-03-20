@@ -1,0 +1,160 @@
+# Generic Multi-Agent Orchestrator Configuration
+# This is the base configuration for any project/platform
+# Platform-specific configs (like trademe) extend this base
+
+agents:
+  architect:
+    name: "Software Architect"
+    description: "Analyzes requirements and validates against project architecture patterns"
+    specialization: "architecture_analysis"
+    primary_concerns:
+      - "Architecture pattern compliance"
+      - "Module dependency validation"
+      - "Design system integration"
+      - "Platform service patterns"
+      - "Technology stack compatibility"
+
+  researcher:
+    name: "Code Researcher"
+    description: "Gathers context, researches existing patterns, creates requirements"
+    specialization: "requirements_research"
+    primary_concerns:
+      - "Codebase pattern analysis"
+      - "Requirements documentation"
+      - "Legacy integration constraints"
+      - "Existing service discovery"
+      - "Technical feasibility assessment"
+
+  planner:
+    name: "Implementation Planner"
+    description: "Creates detailed implementation plans with validation"
+    specialization: "implementation_planning"
+    primary_concerns:
+      - "Implementation strategy design"
+      - "Module structure planning"
+      - "Integration patterns"
+      - "Testing strategy"
+      - "Build system compatibility"
+
+  programmer:
+    name: "Code Generator"
+    description: "Generates code following project patterns and standards"
+    specialization: "code_generation"
+    primary_concerns:
+      - "Code generation"
+      - "Module placement decisions"
+      - "Dependency injection"
+      - "Testing code generation"
+      - "Documentation generation"
+
+  security_engineer:
+    name: "Security Engineer"
+    description: "Performs security audits and vulnerability scans"
+    specialization: "security_audit"
+    primary_concerns:
+      - "OWASP vulnerability scanning"
+      - "Platform-specific security checks"
+      - "API security analysis"
+      - "Code security review"
+      - "Security compliance verification"
+
+  test_runner:
+    name: "Test Runner"
+    description: "Runs comprehensive tests with auto-fix retry loop"
+    specialization: "testing"
+    primary_concerns:
+      - "Unit test execution"
+      - "Integration testing"
+      - "UI testing (platform-specific)"
+      - "Deep research on test failures"
+      - "Auto-fix retry loop with intelligent analysis"
+
+  qa_engineer:
+    name: "QA Engineer"
+    description: "Tests and validates generated code, runs quality assurance"
+    specialization: "quality_assurance"
+    primary_concerns:
+      - "Build validation"
+      - "Test execution and coverage"
+      - "Architecture compliance verification"
+      - "Performance benchmarking"
+      - "Integration testing"
+
+# Default paths (can be overridden by platform-specific configs)
+paths:
+  # Work folder - all outputs organized by ticket with descriptions
+  work_folder: "work"
+
+  # Ticket-based structure: work/{TICKET_ID}-{short-description}/
+  ticket_folder_template: "work/{TICKET_ID}-{DESCRIPTION}"
+  specs_folder: "work/{TICKET_ID}-{DESCRIPTION}/specs"
+  reports_folder: "work/{TICKET_ID}-{DESCRIPTION}/reports"
+  logs_folder: "work/{TICKET_ID}-{DESCRIPTION}/logs"
+
+  # File naming (no prefixes needed - folder name is the ticket ID)
+  requirements_file: "requirements.md"
+  research_file: "research.md"
+  architecture_file: "architecture-analysis.md"
+  implementation_plan_file: "implementation-plan.md"
+  security_report_file: "security-report.md"
+  test_report_file: "test-report.md"
+  qa_report_file: "qa-report.md"
+  crash_analysis_file: "crash-analysis.md"
+  crash_fix_validation_file: "crash-fix-validation.md"
+  context_file: "context.json"
+
+  # Shared temporary outputs (not ticket-specific)
+  agent_outputs: "work/agent-outputs"
+
+  # Project paths (must be set by platform-specific config or command-line)
+  target_project: null  # Path to target codebase (e.g., /path/to/ios-project)
+  specs_repo: null      # Optional: Path to specifications repository
+
+# Workflow configuration
+workflow:
+  stages:
+    - "architecture_analysis"
+    - "requirements_research"
+    - "implementation_planning"
+    - "code_generation"
+    - "security_audit"
+    - "testing"
+    - "quality_assurance"
+
+  handoff_required: true
+  validation_checkpoints:
+    - "after_architecture_analysis"
+    - "after_requirements_creation"
+    - "after_implementation_plan"
+    - "after_code_generation"
+    - "after_security_audit"
+    - "after_testing"
+    - "after_quality_assurance"
+
+  # Auto-fix configuration for testing
+  auto_fix:
+    enabled: true
+    max_attempts: 3
+    retry_on_failure: true
+
+# Quality gates (can be enabled/disabled)
+quality_gates:
+  architecture_compliance: true
+  build_system_validation: true
+  testing_coverage: true
+  documentation_requirements: true
+
+# Auto-folder naming configuration
+folder_naming:
+  # Generate folder names from ticket titles
+  # Example: "VLP-123: Add caching layer" → "VLP-123-add-caching-layer"
+  auto_generate: true
+  format: "{ticket_id}-{description_slug}"
+  description_slug:
+    # Convert to kebab-case
+    lowercase: true
+    separator: "-"
+    # Maximum length for description part
+    max_length: 50
+    # Words to remove from description (common noise words)
+    remove_words: ["the", "a", "an"]
