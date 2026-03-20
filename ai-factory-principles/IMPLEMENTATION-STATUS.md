@@ -10,7 +10,7 @@
 
 **Location**: `implementation/unified-llm-client/`
 
-**Status**: **FULLY FUNCTIONAL** with Trade Me LiteLLM proxy!
+**Status**: **FULLY FUNCTIONAL** with Generic Company LiteLLM proxy!
 
 **Features:**
 - ✅ Multi-provider support (Anthropic working, OpenAI/Gemini stubs ready)
@@ -18,7 +18,7 @@
 - ✅ Tool calling
 - ✅ Multi-turn conversations
 - ✅ Automatic prompt caching (Anthropic)
-- ✅ Trade Me proxy integration
+- ✅ Generic Company proxy integration
 - ✅ Configuration from Claude Code settings
 
 **Test Results**: ✅ 5/5 tests passing
@@ -30,7 +30,7 @@
 ✅ Streaming
 ```
 
-**Working Models** (via Trade Me proxy):
+**Working Models** (via Generic Company proxy):
 - `claude-haiku-4-5` - Fast & cheap
 - `claude-sonnet-4-5` - Balanced
 - `claude-opus-4-6` - Most capable
@@ -174,10 +174,10 @@ response = await generate(
 cd ~/Development/ai-tools/ai-factory-principles/implementation/unified-llm-client
 
 # Run all tests
-python3 test_trademe.py
+python3 test_generic.py
 
-# Run Trade Me config example
-python3 examples/trademe_config.py
+# Run Generic Company config example
+python3 examples/generic_config.py
 ```
 
 **Expected**: All tests pass with your LiteLLM proxy ✅
@@ -342,7 +342,7 @@ In **~90 minutes**, we've built:
 4. ✅ **Coding agent core architecture**
 5. ✅ **11 comprehensive documentation files**
 6. ✅ **StrongDM's complete open-source specs**
-7. ✅ **Working integration** with Trade Me infrastructure
+7. ✅ **Working integration** with Generic Company infrastructure
 8. ✅ **5 passing test scenarios**
 
 **Total Investment**: ~$3 in tokens
@@ -359,7 +359,7 @@ You now have:
 ✅ **Techniques** - Digital Twins, validation patterns
 ✅ **Specifications** - Complete implementation specs
 ✅ **Examples** - Working code demonstrating each concept
-✅ **Integration** - Works with Trade Me LiteLLM proxy
+✅ **Integration** - Works with Generic Company LiteLLM proxy
 
 **Everything you need to start building features 10x faster!**
 
@@ -371,7 +371,7 @@ You now have:
 ```bash
 # LLM Client tests
 cd implementation/unified-llm-client
-python3 test_trademe.py
+python3 test_generic.py
 
 # Digital Twin demo
 cd ~/Development/ai-tools/ai-factory-principles

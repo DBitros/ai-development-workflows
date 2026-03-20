@@ -93,13 +93,13 @@ git commit -m "feat: implement my-feature-name"
 
 ---
 
-## 📝 Example: TradeMe iOS Project
+## 📝 Example: GenericCompany iOS Project
 
 ### **First Time Setup** (One-time)
 
 ```bash
-# 1. Navigate to TradeMe iOS project
-cd ~/trademe/ios-app  # or wherever it is
+# 1. Navigate to GenericCompany iOS project
+cd ~/generic/ios-app  # or wherever it is
 
 # 2. Set workspace
 /set-workspace
@@ -116,7 +116,7 @@ chmod +x .factory-run/.templates/new-factory-run-worktree.sh
 
 # 5. Create knowledge pointer
 cat > .factory-run/KNOWLEDGE-BASE.md << 'EOF'
-# TradeMe iOS Knowledge Base
+# GenericCompany iOS Knowledge Base
 
 **Locations**:
 - Axiom/ - iOS patterns and skills
@@ -133,7 +133,7 @@ cat > .factory-run/KNOWLEDGE-BASE.md << 'EOF'
 **For factory runs**: Include Axiom skills and knowledge files in spec
 EOF
 
-# DONE! Factory ready for TradeMe iOS
+# DONE! Factory ready for GenericCompany iOS
 ```
 
 ---
@@ -156,11 +156,11 @@ code SPEC.md
 ```markdown
 ## Knowledge Context
 
-**Agent: Read these first to understand TradeMe iOS patterns**:
-- `~/trademe/ios-app/Axiom/ui-design/swiftui-navigation.md`
-- `~/trademe/ios-app/project/knowledge/patterns/coordinator-pattern.md`
-- `~/trademe/ios-app/project/knowledge/gotchas/swiftui-state-bugs.md`
-- `~/trademe/ios-app/README.md`
+**Agent: Read these first to understand GenericCompany iOS patterns**:
+- `~/generic/ios-app/Axiom/ui-design/swiftui-navigation.md`
+- `~/generic/ios-app/project/knowledge/patterns/coordinator-pattern.md`
+- `~/generic/ios-app/project/knowledge/gotchas/swiftui-state-bugs.md`
+- `~/generic/ios-app/README.md`
 
 **Key patterns to follow**:
 - Use Coordinator pattern for navigation
@@ -229,7 +229,7 @@ Spec: .factory-run/fix-navigation-bug/SPEC.md"
 
 **Outputs something like**:
 ```yaml
-project: trademe-ios
+project: generic-ios
 worktree: /path/to/worktrees/VLP-1234
 knowledge: /path/to/project/knowledge
 main_repo: /path/to/main/repo

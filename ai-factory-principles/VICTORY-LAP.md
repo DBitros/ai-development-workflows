@@ -44,7 +44,7 @@ response = await generate(
 - ✅ Streaming
 - ✅ Tool calling
 - ✅ Prompt caching (90% cost savings!)
-- ✅ Trade Me LiteLLM proxy integration
+- ✅ Generic Company LiteLLM proxy integration
 - ✅ Auto-config from Claude Code settings
 
 **Test Status**: 5/5 passing ✅
@@ -149,8 +149,8 @@ ai-factory-principles/
 │   │   ├── examples/
 │   │   │   ├── basic_usage.py ✅
 │   │   │   ├── streaming.py ✅
-│   │   │   └── trademe_config.py ✅
-│   │   ├── test_trademe.py ✅           # 5/5 passing!
+│   │   │   └── generic_config.py ✅
+│   │   ├── test_generic.py ✅           # 5/5 passing!
 │   │   └── requirements.txt ✅
 │   │
 │   └── coding-agent/ ✅ STARTED
@@ -176,7 +176,7 @@ ai-factory-principles/
 ### ✅ Technical Achievements
 
 1. **Built production-ready multi-provider LLM client**
-   - Works with Trade Me LiteLLM proxy
+   - Works with Generic Company LiteLLM proxy
    - Automatic prompt caching
    - All tests passing
 
@@ -192,7 +192,7 @@ ai-factory-principles/
 
 4. **Integrated with existing infrastructure**
    - Reads Claude Code settings
-   - Works with Trade Me proxy
+   - Works with Generic Company proxy
    - Ready for ai-tools integration
 
 ### ✅ Documentation Achievements
@@ -262,7 +262,7 @@ TIME: 4-6 hours (same day!)
 ### Test 1: LLM Client (2 minutes)
 ```bash
 cd ~/Development/ai-tools/ai-factory-principles/implementation/unified-llm-client
-python3 test_trademe.py
+python3 test_generic.py
 ```
 
 **Expected**: 5/5 tests pass ✅
@@ -297,7 +297,7 @@ What we built:
 - ✅ Functional Digital Twin example
 - ✅ Coding agent foundation
 - ✅ 47,000 words of documentation
-- ✅ Integration with Trade Me infrastructure
+- ✅ Integration with Generic Company infrastructure
 - ✅ Everything tested and working
 
 **Time**: 90 minutes

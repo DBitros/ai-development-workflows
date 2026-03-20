@@ -94,7 +94,7 @@ class ConfigLoader:
     @staticmethod
     def get_model_mapping() -> Dict[str, str]:
         """
-        Get model name mapping for Trade Me LiteLLM proxy.
+        Get model name mapping for LiteLLM LiteLLM proxy.
 
         The proxy uses different model names than direct Anthropic API.
         This mapping helps convert between formats.
